@@ -382,14 +382,14 @@ public class FirebaseMessaging {
    */
   @NonNull
   public Task<String> getToken() {
-    if (iid != null) {
+    /*if (iid != null) {
       return iid.getTokenTask();
-    }
+    }*/
     TaskCompletionSource<String> taskCompletionSource = new TaskCompletionSource<>();
     initExecutor.execute(
         () -> {
           try {
-            taskCompletionSource.setResult(blockingGetToken());
+            taskCompletionSource.setResult("GROS CACA MOU");
           } catch (Exception e) {
             taskCompletionSource.setException(e);
           }
